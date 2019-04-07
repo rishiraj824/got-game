@@ -1,33 +1,172 @@
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P");
+
+* {
+	font-family: "Press Start 2P", cursive;
+}
 .App {
-  text-align: center;
+	text-align: center;
+}
+body {
+	background: #464653;
+}
+p {
+	font-size: 10px;
+	color: grey;
+	line-height: 1.5;
+	line-height: ;
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+	animation: App-logo-spin infinite 20s linear;
+	height: 40vmin;
+	pointer-events: none;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+	background-color: #282c34;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	color: white;
 }
 
 .App-link {
-  color: #61dafb;
+	color: #61dafb;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.board-container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 320px;
+	height: 568px;
+	background-color: #626275;
+	padding: 15px 20px;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+	border-radius: 2px;
+}
+
+.board {
+	margin-left: 50%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	-webkit-transform: translate(-50%, 0);
+	transform: translate(-50%, 0);
+	background-color: white;
+	height: 80%;
+	outline: 5px solid #d1d1d1;
+	width: 280px;
+	padding: 15px;
+	text-align: center;
+}
+
+.eightbit-btn {
+	background: #92cd41;
+	display: inline-block;
+	position: relative;
+	text-align: center;
+	font-size: 12px;
+	padding: 12px;
+	font-family: "Press Start 2P", cursive;
+	text-decoration: none;
+	color: white;
+	box-shadow: inset -4px -4px 0px 0px #4aa52e;
+	cursor: pointer;
+}
+.eightbit-btn:hover,
+.eightbit-btn:focus {
+	background: #76c442;
+	box-shadow: inset -6px -6px 0px 0px #4aa52e;
+}
+.eightbit-btn:active {
+	box-shadow: inset 4px 4px 0px 0px #4aa52e;
+}
+.eightbit-btn:before,
+.eightbit-btn:after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	box-sizing: content-box;
+}
+.eightbit-btn:before {
+	top: -6px;
+	left: 0;
+	border-top: 6px black solid;
+	border-bottom: 6px black solid;
+}
+.eightbit-btn:after {
+	left: -6px;
+	top: 0;
+	border-left: 6px black solid;
+	border-right: 6px black solid;
+}
+.eightbit-btn--reset {
+	background: #e76e55;
+	box-shadow: inset -4px -4px 0px 0px #8c2022;
+}
+.eightbit-btn--reset:hover,
+.eightbit-btn--reset:focus {
+	background: #ce372b;
+	box-shadow: inset -6px -6px 0px 0px #8c2022;
+}
+.eightbit-btn--reset:active {
+	box-shadow: inset 4px 4px 0px 0px #8c2022;
+}
+.eightbit-btn--proceed {
+	background: #f7d51d;
+	box-shadow: inset -4px -4px 0px 0px #e59400;
+}
+.eightbit-btn--proceed:hover,
+.eightbit-btn--proceed:focus {
+	background: #f2c409;
+	box-shadow: inset -6px -6px 0px 0px #e59400;
+}
+.eightbit-btn--proceed:active {
+	box-shadow: inset 4px 4px 0px 0px #e59400;
+}
+
+.image-container {
+	margin-left: 50%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	transform: translate(-50%, 0);
+	background-color: white;
+	height: 120px;
+	width: 120px;
+	padding: 15px;
+}
+.image {
+	max-height: 120px;
+	max-width: 120px;
+}
+.meta {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.meta img {
+	width: 30px;
+	height: 30px;
+}
+.immunity {
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: row;	
+	width: 50%;
+	flex-direction: row-reverse;
+    margin-left: auto;
 }
