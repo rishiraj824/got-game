@@ -1,4 +1,4 @@
-## Enjoy the GOT game while knowing how important is insurance for you
+## Enjoy the GOT game while knowing how important insurance is for you
 
 ### `npm start`
 
